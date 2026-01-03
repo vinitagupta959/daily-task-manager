@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Mangement</title>
+  <link rel="shortcut icon"
+    href="https://www.proofhub.com/articles/wp-content/uploads/2024/02/Task-Management-Strategies-1024x775.jpg"
+    type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- fontawsome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+
+  <main id="main-Container">
+
+    <!-- For no task container -->
+    <section id="emptyContainer" style="display: none">
+      <div>
+        <p>No tasks yet. Get started by adding your first task!</p>
+        <button id="emptyButton"><i class="fa-solid fa-plus"></i></button>
+      </div>
+    </section>
+
+
+
+
+    <!-- Filter Section -->
+    <section id="filter" class="filter-container" style="display: none">
+      <div id="filterDiv">
+        <p id="filterText">Filter</p>
+        <button id="priority">Priority</button>
+        <button id="completed">Completed</button>
+        <button id="pending">Pending</button>
+        <button id="dueDate">Due Date</button>
+        <button id="alltask">All Tasks</button>
+      </div>
+      <div id="add">
+        <button id="addTask">Add a Task</button>
+      </div>
+    </section>
+
+
+
+
+    <!-- Task Adding Section -->
+    <section id="taskAdding" class="task-form" style="display: none">
+      <div class="form-container">
+        <label for="title">Title:</label>
+        <input type="text" id="title" class="inputFild" required />
+
+        <label for="description">Description:</label>
+        <textarea id="description" placeholder="Optional" class="inputFild"></textarea>
+
+        <label>Select Priority:</label>
+        <div class="priority-options">
+          <input type="radio" name="priority" value="High" id="high" />
+          <label for="high">High</label>
+          <input type="radio" name="priority" value="Medium" id="medium" />
+          <label for="medium">Medium</label>
+          <input type="radio" name="priority" value="Low" id="low" />
+          <label for="low">Low</label>
+        </div>
+        <label>Repeat:</label>
+        <div class="radio-container">
+          <input type="radio" name="repeat" value="Not repeated" id="notRepeated" />
+          <label for="notRepeated">Not Repeated</label>
+          <input type="radio" name="repeat" value="Daily" id="daily" />
+          <label for="daily">Daily</label>
+          <input type="radio" name="repeat" value="Weekdays" id="weekly" />
+          <label for="weekly">Weekdays</label>
+          <input type="radio" name="repeat" value="Weekend" id="weekend" />
+          <label for="weekend">Weekend</label>
+        </div>
+        <label for="customRepet">Due Date</label>
+        <input type="date" id="customDate" />
+        <div class="button-group">
+          <button id="saveButton" class="addig-btn">Save</button>
+          <button id="updateButton" class="addig-btn hidden">Update</button>
+          <button id="cancelButton" class="addig-btn">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- All Tasks Container -->
+    <section id="alltasks" class="tasks-container" style="display: none"></section>
+
+    <section id="noTaskContainer" style="display: none;">
+      <div id="noTask">No Task</div>
+    </section>
+
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
